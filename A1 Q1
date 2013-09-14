@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>javascript</title>
+	<script = "text/javascript"> 
+		document.writeln("Spike is a great dog!")
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
