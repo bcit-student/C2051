@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A1 Q2</title>
+	<script = "text/javascript"> 
+		var newPet = prompt("Enter a new pet name","");
+		document.write("Your dog, Spike, is brown. Your " + newPet + " will also be brown.")
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
