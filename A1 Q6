@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+		var name = prompt ("Enter employee's name: ","");
+		var rate = parseInt(prompt("Enter employee's rate of pay: ",""));
+		var hour = parseInt(prompt("Enter employee's hours worked in one week: ",""));
+		var overtime = parseInt(prompt("Enter employee's overtime pay rate: ",""));
+		var deduction = parseInt(prompt("Enter employee's payroll deductions: ",""));
+				
+		//assumes 40 is the standard hours per week and anything over that is considered overtime. 
+		if (hour > 40){	
+			var overtimeHour = hour - 40;
+		}
+		else{
+			var overtimeHour = 0;
+		}
+		
+		var grossPay = (rate*hour) + (overtime*overtimeHour);
+		var netPay = grossPay - deduction;
+		
+		document.write(name + "'s gross pay is $" + grossPay + " and net pay is $" + netPay);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
