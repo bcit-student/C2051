@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A1 Q2</title>
+	<script = "text/javascript"> 
+		document.write("In 4 years Spike will be 6 years old");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
