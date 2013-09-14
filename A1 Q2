@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>A1 Q2</title>
+	<title>Assignment 1</title>
 	<script = "text/javascript"> 
 		var birthYear = parseInt(prompt("Enter your birthyear", ""));
 		var currentYear = new Date().getFullYear();
