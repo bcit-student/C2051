@@ -1,4 +1,6 @@
-C2051
+COMP 2051
 =====
 
-COMP2051 - Assignments
+Repo for COMP 2051 - Advanced Web Development with JavaScript and AJAX.
+
+
