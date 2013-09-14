@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>A1 Q2</title>
+	<script = "text/javascript"> 
+		var birthYear = parseInt(prompt("Enter your birthyear", ""));
+		var currentYear = new Date().getFullYear();
+		var newAge = currentYear - birthYear;
+		document.write("You are " + newAge + "!");
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
