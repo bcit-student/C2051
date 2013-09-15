@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		var first = prompt("Please enter your first integar:");
+		var two = prompt("Please enter your second integar:");
+		var three = prompt("Please enter your third integar:");
+		
+		var products = (first*two*three);
+		document.write(products);
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
