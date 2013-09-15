@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		prompt ("Enter an integer", 0);
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
