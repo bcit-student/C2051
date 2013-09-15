@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		var age = parseInt(prompt("Enter a number to convert a string to an integer:"));
+		alert("You string have succesfully converted to an integer. Yeah!")
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
