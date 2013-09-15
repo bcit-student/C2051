@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		var miles = parseInt(prompt("Please enter miles:"));
+		var gallons = parseInt(prompt("Please enter gallons:"));
+		var average = (miles/gallons);
+		
+		document.write("The average of miles per gallon for your vehicle is: "+average)
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
