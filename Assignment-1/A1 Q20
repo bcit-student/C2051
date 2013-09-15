@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		var counter = 1;
+		var input;
+		var sale = new Array();
+		var total = 0;
+		var earnings;
+		
+		input = prompt("Did you make a sale today? (Type 'y' for yes and 'n' for no)");
+		while (input !="n"){
+			sale_item = parseFloat(prompt("Please enter the sale price of item number " + counter + " :", "")); 
+			sale[(counter - 1)] = sale_item;
+			counter += 1
+			input = prompt("Enter another sale? (Type 'y' for yes and 'n' for no)", ""); 		
+		}
+		
+		if (counter > 1){
+				for(var i = 0; i< sale.length; i++){
+					total += sale[i];
+				};
+				var commission = parseFloat(prompt("Please enter the commission rate that you receive (e.g. 2% = 2): ", ""));
+				earnings = total * (commission / 100);
+				document.write("You sold "+(counter - 1)+"items. Your comission earnings is $"+earnings);
+		}
+		else{
+			document.write("You didn't sell anything today.")
+		}
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
