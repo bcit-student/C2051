@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		document.write("This is a JavaScript program");
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
