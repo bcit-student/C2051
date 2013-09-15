@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+	
+		var account = parseInt(prompt("Please enter account number: "));
+		var balancePrev = parseInt(prompt("Please enter previous balance: "));
+		var charges = parseInt(prompt("Please enter total charges: "));
+		var payment = parseInt(prompt("Please enter total payments/credits: "));
+		var limit = parseInt(prompt("Please enter credit limit: "));
+		var balanceDebt = (balancePrev+charges) - payment;
+		var remainCredit = limit - balanceDebt;
+		
+		if(balanceDebt < limit){
+			document.write("Your leftover credit is: " + remainCredit);
+		}
+		else{
+			document.write("You have exceeded your credit.")
+		}
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>
