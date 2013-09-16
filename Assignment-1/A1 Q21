@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 1</title>
+	<script = "text/javascript"> 
+		var addMoreEmployee = true;
+		do{
+			var name = prompt("Enter employee's name: ");
+			var rate = prompt("Enter employee's rate of pay: ");
+			var hours = prompt("Enter employee's hours of worked this week: ");
+			var regEarnings = rate*hours;
+
+			if(hours>40){
+				var ot_hours = hours - 40;
+				var ot_pay = ot_hours * 1.5;
+				var total_pay = regEarnings + ot_pay;
+				document.write(name+"'s Paycheck<br>Standard hours: " +hours+ "<br>Standard pay: $" +regEarnings+"<br>Overtime hours: "+ot_hours+"<br>Overtime pay: $"+ot_pay+"<br>Gross Pay: $"+total_pay  + "<br>");
+			}
+			else{
+				document.write(name+"'s Paycheck <br>Standard work hours: " +hours+ "<br>Gross pay: $" +regEarnings + "<br>");
+			}
+
+			addMoreEmployee = confirm("Add another employee?");
+		} 
+		while (addMoreEmployee)
+				
+	</script>
+</head>
+<body>
+
+</body>
+</html>
