@@ -1,0 +1,43 @@
+//Javascript only. Different parts are aggregated into one file
+
+    //part a
+			var z = (x++) + y;
+
+		//part b
+			var count;
+			if (count > 10)
+			{
+				document.write("Count is greater than ten.");
+			}
+
+		//part c
+			var x;
+			var total;
+			
+			total = total - (--x);
+
+		//part d 
+			var q;
+			var divisor;
+			
+			//1st way
+			q = q % divisor;
+			
+			//2nd way
+			temp = q/divisor;
+			multiplier = parseInt(temp, 10);
+			q = q - (q*multiplier);    
+
+		//part e
+			var x2; //already declared x
+			var sum;
+			
+		//part f
+			x2 = 1;
+			
+		//part g
+			sum = 0;
+			
+		//part h
+			sum = x2 + sum;
+			document.write("The sum is:" + sum);
