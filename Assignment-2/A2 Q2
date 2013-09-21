@@ -4,28 +4,31 @@
 	<meta charset="UTF-8">
 	<title>Assignment 2: Control Statements</title>
 	<script type="text/javascript">
-		function getAverage(){			
-			var student = "", i = 1, sum = 0;
-			while(i <= 5){
-				var student = parseFloat(prompt("Please enter grade for student " + i + ":",""));
-
+		function getAverage(){					
+			var i = 1, sum = 0;
+			var studentCount = parseInt(prompt("How many total students are in the class?",""));			
+						
+			while (student != "n"){
+				var grade = parseFloat(prompt("Please enter grade of student " + i,""));		
 				i ++;
-				sum = sum+student;				
-			}
+				sum = sum + grade;	
+				var student = prompt("Enter more student's grade? (y or n)","");									
+			};
+
 			if(isNaN(sum)){
 				document.write("All grades entered must be integers in the range 0 to 100. Try again.")
 			}
 			else{
-			document.write("the average of your class is: " + (sum/10));
+			document.write("The average of your class is: " + (sum/studentCount));
 			}			
 		}	
 	</script>
 </head>
 <body>
 	<h1>Average Calculator</h1>
-	<p>Use this to calculate the average for a class of ten</p>
+	<p>Use this to calculate the average for your class</p>
 	<h2></h2>
-	<hr/><br>
+	<hr/><br>	
 	<input type="button" id="grade" value="Click to get class average" onclick="getAverage()"/>
 </body>
 </html>
