@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		function getAverage(){			
+			var student = "", i = 1, sum = 0;
+			while(i <= 5){
+				var student = parseFloat(prompt("Please enter grade for student " + i + ":",""));
+
+				i ++;
+				sum = sum+student;				
+			}
+			if(isNaN(sum)){
+				document.write("All grades entered must be integers in the range 0 to 100. Try again.")
+			}
+			else{
+			document.write("the average of your class is: " + (sum/10));
+			}			
+		}	
+	</script>
+</head>
+<body>
+	<h1>Average Calculator</h1>
+	<p>Use this to calculate the average for a class of ten</p>
+	<h2></h2>
+	<hr/><br>
+	<input type="button" id="grade" value="Click to get class average" onclick="getAverage()"/>
+</body>
+</html>
