@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		
+		function getResult(){	
+			var counter = 0;
+			var values = new Array();
+			
+			while(ask != "n"){
+				var input = parseInt(prompt("Please enter a number between 1 and 100: ",""));
+				values[counter] = input;
+				counter = counter + 1;
+				if(isNaN(input) || input < 1 || input > 100){
+					alert("Number entered must be between 1 and 100. Try again.")
+				}
+				else{
+					var ask = prompt("Enter more number (y or n)? ", "");
+				}
+
+			values.min = function(values){
+				return Math.min.apply(Math, values);
+			}
+				var minimum = values.min(values);
+				document.write("<br>The smalles value of the array you entered is:" + minimum + " .");
+			}		
+		}	
+	</script>
+</head>
+<body>
+	<h1>Find smallest integer</h1>
+	<hr/><br>
+
+	<input type="button" id="average" value="Click here" onclick="getResult();"/>
+</body>
+</html>
