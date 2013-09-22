@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		
+		function getResult(){	
+			var sales = []; 
+			var limit = parseInt(prompt("Please enter the total number of items sold this week: ",""));
+			
+			for(var i = 0; i < limit; i++){
+				var item = parseInt(prompt("Please enter the item sold (indicated by 1, 2, 3, or 4):",""));
+				sales[i] = item;
+				if (isNaN(item) || item > 4 || item < 1){
+					alert("Item entered must be indicated by 1, 2, or 4. Try again.")
+				}
+				else{
+					limit + 1;
+				}
+			}
+			
+			var item1 = 0; // total number of item1 sold
+			var item2 = 0; // total number of item2 sold
+			var item3 = 0; // total number of item3 sold
+			var item4 = 0; // total number of item4 sold
+			
+			for (var j = 0;  j < sales.length; j++){
+				if (sales[j] == "1"){
+					item1 = item1 + 1;
+				}
+				else if (sales[j] == "2"){
+					item1 = item2 + 1;
+				}
+				else if (sales[j] == "3"){
+					item1 = item3 + 1;
+				}
+				else{
+					item4 = item4 + 1;
+				}
+			}
+			
+			document.write("Total quantity of item 1 sold: " + item1); 
+			document.write("<br>Total quantity of item 2 sold: " + item2); 
+			document.write("<br>Total quantity of item 3 sold: " + item3); 
+			document.write("<br>Total quantity of item 4 sold: " + item4); 
+
+			var value1 = 239.99;
+			var value2 = 129.75;
+			var value3 = 99.95;
+			var value4 = 350.89;
+			
+			var gross = (item1 * value1) + (item2 * value2) + (item3* value3) + (item4 * value4);			
+			var commission = 0.09 * gross;
+			var base = 200;		
+			var earning = base + commission;
+			
+			document.write("<br>Total Earnings: $" + earning);
+		
+		};	
+	</script>
+</head>
+<body>
+	<h1>Salesperson's Earnings</h1>
+	<hr/><br>
+	<input type="button" id="result" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
