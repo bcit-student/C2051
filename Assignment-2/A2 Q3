@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		
+		function getResult(){			
+			var limit = parseInt(prompt("Please enter the number of students who took this exam: ",""));
+			var scoreArray = new Array();
+			var percentPass;
+			
+			for (var i = 0; i < limit; i++){
+				var score = parseInt(prompt("Please enter the test result of student " + (i + 1) + ": ",""));
+				scoreArray[i] = score;			
+			}
+
+			var pass  = 0; // total number of pass
+			var fail = 0; // total number of fail
+			
+			for (var j = 0; j < scoreArray.length; j++){
+				if (scoreArray[j] == "1"){
+					pass = pass + 1;
+				}
+				else{
+					fail = fail + 1;
+				}							
+			};
+			
+			percentPass = pass / limit * 100;
+			
+			document.write("Total number of students who the exam: " + limit);
+			document.write("<br>Total number of students who passed the exam: " + pass);
+			document.write("<br>Total number of students who failed the exam: " + fail);
+			
+			if(percentPass > 80){
+				document.write("<br> More than 80% passed the exam. You should raise tuition.");
+			}
+			else{
+				document.write("<br> Less than 80% passed the exam. You're making the course too difficult.")
+			}
+		};	
+	</script>
+</head>
+<body>
+	<h1>Real Estate Score</h1>
+	<hr/><br>
+
+	<input type="button" id="average" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
