@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		
+		function getResult(){	
+			
+			var miles = parseInt(prompt("Please enter number of miles driven", ""));
+			var gallons = parseInt(prompt("Please enter number of gallons used for each tankful", ""));
+			var milesPerGallon = miles / gallons;
+			
+			document.write(milesPerGallon + "miles per gallon");
+		
+		};	
+	</script>
+</head>
+<body>
+	<h1>Odd Integer Product</h1>
+	<hr/><br>
+	<input type="button" id="result" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
