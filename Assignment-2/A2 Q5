@@ -1,0 +1,24 @@
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		
+		function getResult(){	
+			
+			function factorial(n){
+				if (n <= 1) return 1;
+				return n*factorial(n-2);
+			}
+			var n = 15;
+			alert (factorial(n));
+		
+		};	
+	</script>
+</head>
+<body>
+	<h1>Odd Integer Product</h1>
+	<hr/><br>
+	<input type="button" id="average" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
