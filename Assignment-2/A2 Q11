@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 2: Control Statements</title>
+	<script type="text/javascript">
+		
+		function getResult(){			
+			var value = 0;
+
+			while(true){
+				value = value;
+				value ++;
+				document.write(value);
+			}			
+			//With out terminate will result in an infinite loop. crashing the browser
+		}				
+	</script>
+</head>
+<body>
+	<h1>Infinity Loop </h1>
+	<hr/><br>
+
+	<input type="button" id="average" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
