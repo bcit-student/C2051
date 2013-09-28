@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">				
+			
+			
+		function calcCharges(hour){			
+			var hour = parseInt(prompt("Please enter hour: ",""));
+			var minFee = 2;
+			var charge = 0;
+			if(hour >= 3){
+				charge = minFee + (hour * 0.5);
+			}
+			else if(hour >= 24){
+				charge = 10; 
+			}
+			else{
+				charge = minFee;
+			}
+			return charge;
+		}
+		alert("You charge is $" + calcCharges());
+
+	</script>
+</head>
+<body>
+	<h1>Parking Garage</h1>
+	<hr/><br>
+	<input type="button" id="average" value="Click to get result" onclick="calcCharges();"/>
+</body>
+</html>
