@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">				
+			
+			
+		function circleArea(radius){
+			var radius = parseInt(prompt("Enter radius",""));
+			return radius * radius * 3.14;				
+		}
+		alert(circleArea(2));
+
+	</script>
+</head>
+<body>
+	<h1>Area of a Circle</h1>
+	<hr/><br>
+	<input type="button" id="average" value="Click to get result" onclick="getcircleArea();"/>
+</body>
+</html>
