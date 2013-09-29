@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">				
+			
+		function multiple(numerator, denominator){			
+			if((numerator % denominator) == 0){
+				return true;
+			}	
+			else{
+				return false;
+			}
+		}	
+		function getResult(){			
+			var num1 = parseInt(document.getElementById("num1").value);
+			var num2 = parseInt(document.getElementById("num2").value);
+			
+			if(multiple(num1, num2)) {
+				alert("YES, The second integer is a multiple of the first");
+			}
+			else{				
+				alert("NO, The second integer is not a multiple of the first");
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Is the second integer a multiple of the first?</h1>
+	<br>
+	First Number: <input type="text" id ="num1"/> <br/>
+	Second Number: <input type="text" id="num2"/> <br/>
+	<input type="button" id="average" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
