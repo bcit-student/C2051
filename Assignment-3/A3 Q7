@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">				
+			
+		function squareOfAsterisks(side){			
+			var width = side*side; 
+			var height = side*side; 
+			
+			for (var y = 0; y < height; y++){
+				for(var x = width; x > 0; x--){
+				document.write("*");			
+				}			
+				document.write("<br/>");
+			}
+		}	
+		
+		function getResult(){	
+			var input = parseInt(prompt("Please enter side: ", ""));
+			squareOfAsterisks(input);
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Asterisks</h1>
+	<br>
+	<input type="button" id="average" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
