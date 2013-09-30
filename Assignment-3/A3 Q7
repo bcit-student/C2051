@@ -6,8 +6,8 @@
 	<script type="text/javascript">				
 			
 		function squareOfAsterisks(side){			
-			var width = side*side; 
-			var height = side*side; 
+			var width = side; 
+			var height = side; 
 			
 			for (var y = 0; y < height; y++){
 				for(var x = width; x > 0; x--){
