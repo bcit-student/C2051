@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">				
+			
+		var gcd = function(a, b) { 
+			if ( ! b) {
+				return a;
+			}
+
+			return gcd(b, a % b);
+		};	
+		
+		function getResult(){
+			var input1 = parseInt(prompt("Enter first integer"));
+			var input2 = parseInt(prompt("Enter second integer"));
+			
+			alert("The GCD of " + input1 + " and " + input2 + " is: " + gcd(input1,input2));
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Greatest Common Divisor</h1>
+	<br>
+	<input type="button" value="Click to get result" onclick="getResult();"/>
+</body>
+</html>
