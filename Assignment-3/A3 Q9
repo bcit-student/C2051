@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">				
+			
+		function FtoC(F){			
+			return 5 / 9 * (F - 32);
+		}	
+		function CtoF(C){			
+			return 9 / 5 * C + 32;
+		}			
+		function convertCtoF(){	
+			var input = parseInt(document.getElementById("celsius").value);
+			alert(CtoF(input));
+			
+		}
+		function convertFtoC(){	
+			var input = parseInt(document.getElementById("fahrenheit").value);
+			alert(FtoC(input));
+		}
+	</script>
+</head>
+<body>
+	<h1>Celsius / Fahrenheit Calculator</h1>
+	<br>
+	Enter Celsius: <input type="text" id="celsius"/>
+	<input type="button" value="Click to convert to Fahrenheit" onclick="convertCtoF();"/>
+	<br/><br/>
+	Enter Fahrenheit: <input type="text" id="fahrenheit"/>
+	<input type="button" value="Click to covert to Celsius" onclick="convertFtoC();"/>
+</body>
+</html>
