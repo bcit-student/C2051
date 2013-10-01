@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">	
+	
+		var randomNum = Math.floor((Math.random() * 1000)+1);	
+		
+		function getResult(){
+					
+			var userNum = parseInt(document.getElementById("num").value);
+				
+			if (userNum > randomNum){
+				alert("Your guess, " + userNum + ", is too high.");
+				document.getElementById("num").value = "";
+				document.getElementById("num").focus();
+			}
+			else if (userNum < randomNum){
+				alert("Your guess, " + userNum + ", is too low.");
+				document.getElementById("num").value = "";
+				document.getElementById("num").focus();
+			}
+			else if (userNum == randomNum){
+				alert("Your guess is correct!");
+				document.getElementById("num").value = "";
+				document.getElementById("num").focus();
+			}
+		}
+		
+		function displayCheat(){
+			alert(randomNum + " \n \n \"All good is hard. All evil is easy. Dying, losing, cheating, and mediocrity is easy. Stay away from easy.\" - Scott Alexander ");
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Guess the number</h1>
+	<br>
+	<p>Guess a number between 1 and 1000:</p> <input type="text" name="num" id="num"/>
+	<input type="button" value="Enter" onclick="getResult();"/>
+	<p>I had enough! Show me the secret number</p>
+	<input type="button" value="Cheat" onclick="displayCheat();"/>
+	<br/>
+</body>
+</html>
