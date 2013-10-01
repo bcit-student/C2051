@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">	
+	
+		var heads = 0;
+		var tails = 0;
+		
+		function randomFlip(){
+			return Math.floor(Math.random()*2);
+		}
+		
+		function getResult(){
+					
+			var headsBox = document.getElementById("heads");
+			var tailsBox = document.getElementById("tails");
+			
+			if(randomFlip()){
+				heads++;
+				headsBox.value = heads;
+			}
+			else{
+				tails++;
+				tailsBox.value = tails;
+			}
+				
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Coin Toss</h1>
+	<br>
+	Heads: <input type="text" id="heads"/>
+	Tails: <input type="text" id="tails"/>
+	<input type="button" value="Toss coin" onclick="getResult();"/>
+	
+	<br/>
+</body>
+</html>
