@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">	
+	
+		var heads = 0;
+		var tails = 0;
+		
+		function calcDistance(x1,y1,x2,y2){
+			return Math.round(Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2)));
+		}
+		
+		function getResult(){
+			var x1 = parseInt(document.getElementById("x1").value);
+			var y1 = parseInt(document.getElementById("y1").value);
+			var x2 = parseInt(document.getElementById("x2").value);
+			var y2 = parseInt(document.getElementById("y2").value);
+			
+			alert("The distance between your two points is: " + calcDistance(x1,y1,x2,y2));
+			
+			document.getElementById("x1").value ="";
+			document.getElementById("x1").focus();
+			document.getElementById("y1").value ="";
+			document.getElementById("x2").value ="";
+			document.getElementById("y2").value ="";
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Distance between 2 points</h1>
+	<hr/>
+	<br>
+	<h3>First Point</h3>
+	X1 <input type="text" id="x1"/>
+	Y1 <input type="text" id="y1"/>
+	<h3>Second Point</h3>
+	X2 <input type="text" id="x2"/>
+	Y2 <input type="text" id="y2"/>
+	<br/>
+	<h3><input type="button" value="Calulate distance" onclick="getResult();"/></h3>
+	
+	<br/>
+</body>
+</html>
