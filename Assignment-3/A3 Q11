@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 3: Functions</title>
+	<script type="text/javascript">	
+		
+		// Function: Checks if input is Prime number 
+		function isPrime(n) {
+			 if (isNaN(n) || !isFinite(n) || n%1 || n<2) return false; 
+			 var m=Math.sqrt(n);
+			 for (var i=2;i<=m;i++) if (n%i==0) return false;
+			 return true;
+		}
+		
+		// Part A - Calculate Prime Number
+		function calcPrime(){
+			var input = parseInt(document.getElementById("userInput").value);
+					
+			if(isPrime(input)){
+				alert(input + ". Yes it's a prime number");
+			}
+			else{
+				alert(input + ". No it's not a prime number");
+			}	
+		}
+		
+		// Part B - Print out Prime Number
+		window.onload = function(){	
+			for(var i = 0; i <= 10000; i++){			
+				if(isPrime(i)){
+					document.getElementById("output").value = ([i] + ", ");			
+					//document.writeln(i);
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h1>Prime Numbers</h1>
+	<br>
+	Enter Number: <input type="text" id="userInput"/>
+	<input type="button" value="Calculate" onclick="calcPrime();"/>
+	<hr/>
+	<h1>All the Prime Numbers between 1 and 10,000</h1>
+	<textarea name="output" id="output" cols="30" rows="10"></textarea>	
+	<br/>
+</body>
+</html>
