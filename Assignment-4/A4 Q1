@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4: Arrays</title>
+	<script type="text/javascript">	
+		// a
+		var arrayF = [1,2,3,4,5,6,7];
+		document.writeln("The seventh element is: " + arrayF[6]);
+		
+		// b
+		var arrayG = [8,8,8,8,8];
+		document.writeln("<br>Initialize each element: " + arrayG);
+		
+		// c
+		var arrayC = [];
+		for(var i = 1; i <= 100; i++){
+			arrayC[i] = i;
+		}
+		var sum = 0;
+		for (var i = 1; i < arrayC.length; i++){
+			sum = sum + arrayC[i];
+		}
+		document.writeln("<br>The sum is: " + sum);
+		
+		// d
+		var arrayD = [];
+		var arrayA = ["a","b","c","d","e","f","g","h","i","j","k"];
+		
+		for(var i = 0; i < 34; i++){
+			arrayD[i] = i + 1;  
+		}
+		for(var a = 0; a < arrayA.length; a++){
+			arrayD[a] = arrayA[a];
+		}
+		document.writeln("<br>" + arrayD);
+		
+		// e
+		var arrayW = [];
+
+		var largest;
+		
+		for(var i = 0; i < 99; i++){
+			arrayW[i] = i + 1;
+		}
+		document.writeln("<br>" + arrayW);
+		var smallest = Math.min.apply(Math,arrayW);
+		document.writeln("<br>The smallest number is: " + smallest);
+		
+		var largest = Math.max.apply(Math,arrayW);
+		document.writeln("<br>The largest number is: " + largest);
+		
+		// f
+		var arrayT = new Array( 2 );
+		arrayT[0] = new Array(3);
+		arrayT[1] = new Array(3);
+		document.writeln(arrayT);
+		// h. t has 2 rows
+		// i. t has 3 columns
+		// j. t has 6 elements
+		// k. arrayT[1][0], arrayT[1][1], arrayT[1][2].
+		// l. arrayT[0][2], arrayT[1][2];
+		// m. arrayT[1][2] = 0;
+		
+		// n. 
+		
+		arrayT[0][0] = 0;
+		arrayT[0][1] = 0;
+		arrayT[0][2] = 0;
+		arrayT[1][0] = 0;
+		arrayT[1][1] = 0;
+		arrayT[1][2] = 0;
+		
+		// o
+		for (var i =0; i < arrayT.length; i++){
+			for(var j = 0; j < arrayT[j].length; j++){
+				arrayT[i][j] = 0;
+			}
+		}
+		// p
+		
+		//q
+		document.writeln( arrayT[0][0] + " " + arrayT[0][1] + " " + arrayT[0][2] );
+		
+		// r. There isn't a fourth column
+
+		
+		
+	</script>
+</head>
+<body>
+
+</body>
+</html>
