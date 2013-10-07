@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4: Arrays</title>
+	<script type="text/javascript">
+		function getResult1(){
+			// question a
+			var arrayCount = new Array();
+			arrayCount.length = 0;	
+		};
+		function getResult2(){
+			// question b
+			var arrayBonus = new Array();
+			for (var i = 0; i < arrayBonus.length; i++){
+				var addToElement = arrayBonus[i] + 1;
+			}
+		};
+		function getResult3(){
+			// question c
+			var arrayScore = new Array();
+			var arrayScore = [100,95,90,90,100];
+			for (var i = 0; i < arrayScore.length; i++){
+				document.write(arrayScore[i] + " ");
+			}
+		};
+
+	</script>
+</head>
+<body>
+	<h3>a.</h3>	
+	<input type="button" id="average" value="Click to get result" onclick="getResult1();"/>
+	<hr/><br>
+	<h3>b.</h3>
+	<input type="button" id="average" value="Click to get result" onclick="getResult2();"/>
+	<hr/><br>	
+	<h3>c.</h3>
+	<input type="button" id="average" value="Click to get result" onclick="getResult3();"/>
+	<hr/><br>	
+
+</body>
+</html>
