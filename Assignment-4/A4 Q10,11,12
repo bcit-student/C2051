@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4: Arrays</title>
+	<script type="text/javascript">
+		
+		function sieve(array){
+			var count = 0;
+			for(var i = 2; i < array.length; ++i){
+				if(array[i] == 1){
+					count++;
+					for (var j = i*i; j < array.length; j++){
+						if(j%i == 0){
+							array[j] = 0;
+						}
+					}
+				}
+				return count;
+			}
+		}
+		
+		var arrayA = new Array(1000);
+		for(var i = 0; i < arrayA.length; i++){
+			arrayA[i] = 1;
+		}
+		var count = sieve(arrayA);
+		
+		for (k = 2; k < arrayA.length; k++){
+			if(arrayA[k] == 1){
+				document.write(k + "<br>");
+			}
+		}
+			
+	</script>
+ </head>
+ 
+<body>
+
+ </body>
+ </html>
