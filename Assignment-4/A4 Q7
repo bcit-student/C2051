@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4: Arrays</title>
+	<script type="text/javascript">
+
+		var CONTINUE = 0;
+		var LOSE = 1;
+		var WIN = 2;
+		var SIZE = 22;
+		var ROLLS = 1000;
+		var gameStatus;
+		var sum;
+		var myPoint = 0;
+		var roll;
+		var length = 0;
+		var winSum = 0;
+		var loseSum = 0;
+		var wins = new Array( SIZE );
+		var losses = new Array( SIZE );
+		
+		function rollDice(){
+			var die1;
+			var die2;
+			var workSum;
+
+			die1 = Math.floor( 1 + Math.random() * 6 );
+			die2 = Math.floor( 1 + Math.random() * 6 );
+			workSum = die1 + die2;
+
+			return workSum;
+		}
+		
+		for ( var i = 1; i <= SIZE; i++ ){
+		wins[i] = 0;
+		losses[i] = 0;
+		} 
+
+		for ( var i = 1; i <= ROLLS; i++ ){
+			sum = parseInt( rollDice() );
+			roll = 1;
+
+			switch ( sum ){
+				case "7": case "11":
+				gameStatus = WIN;
+				break;
+				case "2": case "3": case "12":
+				gameStatus = LOSE;
+				break;
+
+				default:
+				gameStatus = CONTINUE;
+				myPoint = sum;
+				break;
+			} 
+
+			while ( gameStatus == CONTINUE ){
+				sum = parseInt( rollDice() );
+				++roll;
+
+				if ( sum == myPoint ){
+					gameStatus = WIN;
+				}
+				else if( sum == 7 ){
+					gameStatus = LOSE;
+				}
+			} 
+
+			if ( roll > 21 ){
+				roll = 21;
+			}
+			
+			if ( gameStatus == WIN ){
+				++wins[ roll ];
+				++winSum;
+			}
+			else{
+				++losses[ roll ];
+				++loseSum;
+			}
+		}
+	
+		document.writeln("Craps<br>");
+
+		for ( var i = 1; i <= 21; i++ ){
+			document.writeln( parseInt( wins[ i ] ) +
+			" games won and " + parseInt( losses[ i ] ) +
+			" games lost on roll " + i + "<br />" );	
+		}
+		document.writeln( "Chances of winning is: " +
+		( 100.0 * winSum / ( winSum + loseSum ) ) +
+		"%<br />" );
+		
+		for ( var i = 1; i <= 21; i++ )
+		length += wins[ i ] * i + losses[ i ] * i;
+
+		document.writeln( "Average game length is " +
+		parseInt( ( length / 1000.0 ) ) + " rolls.<br />" );
+		
+ 	</script>
+</head>
+<body>
+
+
+</body>
+</html>
