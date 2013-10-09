@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment 4: Arrays</title>
+	<script type="text/javascript">
+		
+		//assume 3 by 5 is row by col
+		int row = 3;
+		int col = 5;
+		var sales[row][col];
+
+		for(i = 0; i < sales.length; i++){
+			for(j = 0; j < sales[i].length; j++){
+				sales[i][j] = 0;
+				document.writeln(ij);
+			}
+		}
+			
+	</script>
+ </head>
+ 
+<body>
+
+ </body>
+ </html>
