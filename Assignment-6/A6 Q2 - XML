@@ -1,0 +1,10 @@
+<accounts>
+<account>
+<username>user1</username>
+<password>password</password>
+</account>
+<account>
+<username>user2</username>
+<password>password</password>
+</account>
+</accounts>
