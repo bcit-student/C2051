@@ -1,0 +1,43 @@
+function LoginValidation(){
+	ajaxRequest("accounts.xml", onAccount);
+}
+
+function ajaxRequest(url, callbackFunction){
+	var ajaxObj;
+	if (document.getElementById){
+		ajaxObj = (window.ActiveXObject) ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
+	}
+	ajaxObj.onreadystatechange = function(){
+			if(ajaxObj.readyState == 4 && ajaxObj.status == 200)
+			{
+				callbackFunction(ajaxObj.responseXML);
+			}
+	}
+	
+	ajaxObj.open("GET", url, true);
+	ajaxObj.send();
+}
+
+function onAccount(xmlResponse){
+	var accounts = xmlResponse.getElementsByTagName("account");
+	var username = document.getElementById("name");
+	var password = document.getElementById("password");
+	var errorMessage = document.getElementById("errorMessage");
+	
+	var successLogin = false;
+	for (var i = 0; i < accounts.length ; i++){
+		if (accounts[i].childNodes[1].childNodes[0].nodeValue == username.value){
+			if (accounts[i].childNodes[3].childNodes[0].nodeValue == password.value){
+				successLogin = true;
+				break;
+			}
+		}
+	}
+	
+	if (successLogin){
+		errorMessage.innerHTML = "Your login was successful!";
+	}
+	else{
+		errorMessage.innerHTML = "Invalid username/password. Please try again.";
+	}
+}
