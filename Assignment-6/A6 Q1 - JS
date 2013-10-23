@@ -1,0 +1,99 @@
+var nameCheck = false;
+var commentCheck = false;
+var emailCheck = false;
+var emailAjaxCheck = false;
+
+window.onload = function() {
+	document.forms[0].reset();
+	var name = document.getElementById("firstName");
+	var comment = document.getElementById("comment");
+	var email = document.getElementById("email");
+	
+	//NAME VALIDATOR
+	name.onblur = function(){
+		if (name.value == ""){
+			name.style.backgroundColor = "red";
+			nameCheck = false;
+		}
+		else{
+			name.style.backgroundColor = "green";
+			nameCheck = true;
+		}
+	};
+	
+	//COMMENT VALIDATOR
+	comment.onfocus = function(){
+		comment.value = "";
+	};
+	comment.onblur = function(){
+		if (comment.value == ""){
+			comment.style.backgroundColor = "red";
+			comment.value = "Enter comments here.";
+			commentCheck = false;
+		}
+		else{
+			comment.style.backgroundColor = "green";
+			commentCheck = true;
+		}
+	};
+	
+	//EMAIL VALIDATOR
+	email.onkeypress = function(){
+		ajaxRequest("notList.xml", onNotList)
+	};
+	email.onblur = function(){
+		var emailValid = emailValidator(email.value);
+		if (!emailValid){
+			email.style.backgroundColor = "red";
+			emailCheck = false;
+		}
+		else{
+			if (emailAjaxCheck){
+				email.style.backgroundColor = "green";
+				emailCheck = true;
+			}
+		}
+	};
+}
+
+function emailValidator(mail){
+    var re = /\S+@\S+\.\S+/;
+    return re.test(mail);
+}
+
+function onNotList(xmlResponse){
+	var notEmail = xmlResponse.getElementsByTagName("notEmail");
+	var email = document.getElementById("email");
+	var emailError = document.getElementById("emailError");
+	
+	emailAjaxCheck = true;
+	for (var i = 0; i < notEmail.length ; i++){
+		if (notEmail[i].childNodes[0].nodeValue == email.value ){
+			emailAjaxCheck = false;
+			emailError.innerHTML = "INVALID EMAIL";
+			email.style.backgroundColor = "red";
+			emailCheck = false;
+			break;
+		}
+	}
+	if (emailAjaxCheck){
+		emailError.innerHTML = "";
+	}
+}
+
+function ajaxRequest(url, callbackFunction){
+	var ajaxObj;
+	if (document.getElementById){
+		ajaxObj = (window.ActiveXObject) ? new ActiveXObject("Microsoft.XMLHTTP") : new XMLHttpRequest();
+	}
+	ajaxObj.onreadystatechange = function(){
+			if(ajaxObj.readyState == 4 && ajaxObj.status == 200)
+			{
+				callbackFunction(ajaxObj.responseXML);
+			}
+	}
+	
+	ajaxObj.open("GET", url, true);
+	ajaxObj.send();
+}
+
