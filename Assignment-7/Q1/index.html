@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+		$('#button').click(function(){
+			var prodId = $('#id').val();
+			$.post(
+			"show_product.php",
+			{id:prodId},
+			function(result) {
+			$('#detail').html(result);
+			}
+		);	
+	</script>
+	<title>Assignment 7</title>
+</head>
+<body>
+	<h1>Product Info</h1>
+	
+	<p>
+		Enter a Product ID: 
+		<input type="text" name="id" id="id">
+		<input type="submit" value="Show Details" id="button">
+	</p>
+	<div id="detail"></div>
+</body>
+</html>
